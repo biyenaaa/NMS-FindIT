@@ -8,6 +8,16 @@ class TblItemCategories extends Model {
 	protected $table = 'item_categories';
 	public $timestamps = false;
 
+	public static function getAllCategories( $params=null ) {
+		$query = \DB::table('item_categories as ic')
+				->get();
+		return $query;
+		// if(isset($params['id'])){
+		// 	$query = \DB::table('categories AS c')
+		// 		->get();
+		// }
+	}
+
 	public static function addCategory($params) {
 		$ctgry = new TblItemCategories;
 
