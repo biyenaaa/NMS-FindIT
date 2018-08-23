@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//Test die route for category
+Route::get('/category' , 'ItemCategoriesController@categories_list');
+
+//Test die route for item type and subtype
+Route::get('/type' , 'ItemTypesController@getAllTypes');
+Route::get('/subtype' , 'ItemSubtypesController@getAllSubtypes');
