@@ -55,7 +55,7 @@ class TblComputerSpecs extends Model {
 		if(isset($params['created_at']))
 			$compspec->created_at = $params['created_at'];
 
-		$compspec->updated_at = gmdate('Y-m-d H:i:s')
+		$compspec->updated_at = gmdate('Y-m-d H:i:s');
 
 		try {
 			$compspec->save();

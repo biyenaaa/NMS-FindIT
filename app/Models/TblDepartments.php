@@ -29,7 +29,7 @@ class TblDepartments extends Model {
 
 		try {
 			$dept->save();
-		}catch(QueryException e) {
+		}catch(QueryException $e) {
 			die($e);
 		}
 	}

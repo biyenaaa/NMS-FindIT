@@ -35,7 +35,7 @@ class TblEmployees extends Model {
 		}
 	}
 
-	pubic static function updateEmployee($params) {
+	public static function updateEmployee($params) {
 		$emply = TblEmployees::find($params['id']);
 
 		if(isset($params['fname']))
@@ -50,7 +50,7 @@ class TblEmployees extends Model {
 		if(isset($params['dept_id']))
 			$emply->dept_id = $params['dept_id'];
 
-		$emply->updated_at = gmdate('Y-m-d H:i:s')
+		$emply->updated_at = gmdate('Y-m-d H:i:s');
 
 		try {
 			$emply->save();

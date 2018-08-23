@@ -29,7 +29,7 @@ class TblItemStatus extends Model {
 
 		try {
 			$status->save();
-		}catch(QueryException e) {
+		}catch(QueryException $e) {
 			die($e);
 		}
 	}
